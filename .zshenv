@@ -1,0 +1,12 @@
+# === Aliases === #
+alias upd="sudo apt update"
+alias upg="sudo apt upgrade"
+alias ll="ls -lh --group-directories-first"
+alias la="ls -alh --group-directories-first"
+alias getcursz="gsettings get org.cinnamon.desktop.interface cursor-size"
+alias setcursz="gsettings set org.cinnamon.desktop.interface cursor-size"
+
+# === PATH Additions === #
+PATH=$PATH:$HOME/.local/bin
+
+export PATH
