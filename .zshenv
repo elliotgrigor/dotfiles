@@ -7,6 +7,6 @@ alias getcursz="gsettings get org.cinnamon.desktop.interface cursor-size"
 alias setcursz="gsettings set org.cinnamon.desktop.interface cursor-size"
 
 # === PATH Additions === #
-PATH=$PATH:$HOME/.local/bin
+PATH=$HOME/.local/bin:$PATH
 
 export PATH
