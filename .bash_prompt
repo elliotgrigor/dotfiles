@@ -6,25 +6,25 @@ function __set_my_prompt
   local NOCOLOR="\033[0m"
 
   local git_modified_color="\[${GREEN}\]"
-  local git_status=$(git status 2> /dev/null | grep "Your branch is ahead" 2> /dev/null)
+  local git_status=$(git status 2>/dev/null | grep "Your branch is ahead" 2>/dev/null)
 
   if [ "$git_status" != "" ]; then
     git_modified_color="\[${YELLOW}\]"
   fi
 
-  local git_status=$(git status --porcelain 2> /dev/null)
+  local git_status=$(git status --porcelain 2>/dev/null)
 
   if [ "$git_status" != "" ]; then
     git_modified_color="\[${RED}\]"
   fi
 
-  local git_branch=$(git branch --show-current 2> /dev/null)
+  local git_branch=$(git branch --show-current 2>/dev/null)
 
   if [ "$git_branch" != "" ]; then
     git_branch="-<git::$git_modified_color$git_branch\[${NOCOLOR}\]>"
   fi
 
-  PS1="\n[\u@\h]-(\w)$git_branch\n$ "
+  PS1="\n┌[\u@\h]-(\w)$git_branch\n└$ "
 }
  
 PROMPT_COMMAND='__set_my_prompt'
