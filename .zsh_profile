@@ -1,25 +1,21 @@
-RED="\033[0;31m"
 GREEN="\033[0;32m"
-CYAN="\033[0;36m"
-RESET="\033[0m"
 
-echo "     ${RED}.--.          ${GREEN}.--.          ${CYAN}.--.
-    ${RED}|o_o |        ${GREEN}|o_o |        ${CYAN}|o_o |
-    ${RED}|:_/ |        ${GREEN}|:_/ |        ${CYAN}|:_/ |
-   ${RED}//   \\ \\      ${GREEN}//   \\ \\      ${CYAN}//   \\ \\
-  ${RED}(|     | )    ${GREEN}(|     | )    ${CYAN}(|     | )
- ${RED}/'|_   _/'\\   ${GREEN}/'|_   _/'\\   ${CYAN}/'|_   _/'\\
- ${RED}\\___)=(___/   ${GREEN}\\___)=(___/   ${CYAN}\\___)=(___/${RESET}"
+echo "${GREEN}  _____    _          _ _
+ |__  /___| |__   ___| | |
+   / // __| '_ \\ / _ \\ | |
+  / /_\\__ \\ | | |  __/ | |
+ /____|___/_| |_|\\___|_|_|"
 
 # === Aliases === #
+alias rbo="reboot"
+alias pwo="poweroff"
+
 alias upd="sudo apt update"
 alias upg="sudo apt upgrade"
+
 alias ll="ls -lh --group-directories-first"
 alias la="ls -alh --group-directories-first"
+alias laa="ls -Alh --group-directories-first"
+
 alias getcursz="gsettings get org.cinnamon.desktop.interface cursor-size"
 alias setcursz="gsettings set org.cinnamon.desktop.interface cursor-size"
-
-# === PATH Additions === #
-PATH="$HOME/.local/bin:$PATH"
-
-export PATH
