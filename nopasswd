@@ -1,1 +1,2 @@
+# /etc/sudoers.d/nopasswd
 elliot ALL=(ALL) NOPASSWD:ALL
